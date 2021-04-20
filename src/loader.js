@@ -7258,6 +7258,7 @@ THREE.GLTFLoader = (function () {
     mapName,
     mapDef
   ) {
+		var parser = this;
     return this.getDependency("texture", mapDef.index).then(function (texture) {
       if (parser.extensions[EXTENSIONS.KHR_TEXTURE_TRANSFORM]) {
         texture = parser.extensions[
